@@ -11,7 +11,11 @@
 
    <p>
     <strong>First Micropost:</strong>
+    <% if user.microposts.any? %>
     <%= user.microposts.first.content %>
+    <% else %>
+      No microposts available.
+    <% end %>
   </p>
 
 </div>
